@@ -234,9 +234,9 @@ CALLBACK is an optional callback to be called after the script runs."
   )
   ee-jump-from)
 
-(ee-define "ee-lf" default-directory (ee-script-path "eee-lf.sh") nil ee-jump-from)
+(ee-define "ee-lf" default-directory "lf -print-selection;" nil ee-jump-from)
 
-(ee-define "ee-lf-project" (ee-get-project-dir-or-current-dir) (ee-script-path "eee-lf.sh") nil ee-jump-from)
+(ee-define "ee-lf-project" (ee-get-project-dir-or-current-dir) "lf -print-selection;" nil ee-jump-from)
 
 ;; ";" is important commmand should be "htop;" since, ee-run will redirect stdout to ee-process-output-file
 ;; if command is "htop", ee-run will redirect htop's stdout to ee-process-output-file,
